@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-25T18:03:55.887Z</updated>
+  <updated>2018-03-21T14:12:46.682Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/03/21/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2018/03/21/docker常用命令/</id>
+    <published>2018-03-21T14:11:24.484Z</published>
+    <updated>2018-03-21T14:12:46.682Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>docker常用的命令</strong><br><a id="more"></a><br>docker run -p 8080:8080 –name myxiaoshuo –link mysqldb:mysqldb chen/myxiaoshuo<br>docker build -t chen/myxiaoshuo .<br>docker run -p 8080:8080 –name mycentos –link mysqldb:mysqldb chen/mycentos java -jar myxiaoshuo.jar<br>docker run -p 8080:8080 –name myxiaoshuo –link mysqldb:mysqldb chen/myxiaoshuo java -jar myxiaoshuo.jar<br>docker run –name mysqldb  -v /mysqldb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=070014  -p 3306:3306 -d mysql<br>docker save -o myxiaoshuo.tar chen/myxiaoshuo<br>sudo docker load &lt; myxiaoshuo.tar<br>sudo docker save -o myxiaoshuo.tar chen/myxiaoshuo<br>docker run -d -p 49160:22 -p 1521:1521 wnameless/oracle-xe-11g<br>docker run –name mysqldb  -v D:/docker/mysqldbxiaoshuo:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  -p 3306:3306 -d mysql</p><p>docker run –name mysqldb -p 3306:3306 -v D:\docker\mysqldbfile:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql<br>docker run –name mysqldb -p 3306:3306 -v D:\docker\mysqldbfile:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql –lower_case_table_names=1<br>docker run –rm -v D:/dockerdata:/data alpine ls /data<br>docker run -p 6379:6379 -v D:\docker\redisdb:/data  -d –name redisdb redis redis-server –appendonly yes<br>docker run -d -p 27017:27017 -v D:/docker/mongo:/data/db  –name mongodb mongo –auth<br>db.createUser({ user: ‘chensj’, pwd: ‘123’, roles: [ { role: “userAdminAnyDatabase”, db: “admin” } ] });<br>Successfully added user: {<br>    “user” : “chensj”,<br>    “roles” : [<br>        {<br>            “role” : “userAdminAnyDatabase”,<br>            “db” : “admin”<br>        }<br>    ]<br>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;docker常用的命令&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hello-world   //在此处添加你的标题。</title>

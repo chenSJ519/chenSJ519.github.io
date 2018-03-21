@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="写点什么好呢？">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="docker常用的命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chenSJ519&#39; Blog">
+<meta property="og:url" content="http://yoursite.com/2018/03/21/docker常用命令/index.html">
 <meta property="og:site_name" content="chenSJ519&#39; Blog">
-<meta property="og:description" content="写点什么好呢？">
+<meta property="og:description" content="docker常用的命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-25T14:37:02.968Z">
+<meta property="og:updated_time" content="2018-03-21T14:12:46.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="写点什么好呢？">
+<meta name="twitter:title" content="chenSJ519&#39; Blog">
+<meta name="twitter:description" content="docker常用的命令">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/21/docker常用命令/"/>
 
 
 
 
 
-  <title>tags | chenSJ519' Blog</title>
+  <title> | chenSJ519' Blog</title>
   
 
 
@@ -262,40 +262,181 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/21/docker常用命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenSJ519">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenSJ519' Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 2 个标签
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-21T22:11:24+08:00">
+                2018-03-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/03/21/docker常用命令/" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  229
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/爬虫/" style="font-size: 12px; color: #ccc">爬虫</a> <a href="/tags/部署/" style="font-size: 12px; color: #ccc">部署</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><strong>docker常用的命令</strong><br><a id="more"></a><br>docker run -p 8080:8080 –name myxiaoshuo –link mysqldb:mysqldb chen/myxiaoshuo<br>docker build -t chen/myxiaoshuo .<br>docker run -p 8080:8080 –name mycentos –link mysqldb:mysqldb chen/mycentos java -jar myxiaoshuo.jar<br>docker run -p 8080:8080 –name myxiaoshuo –link mysqldb:mysqldb chen/myxiaoshuo java -jar myxiaoshuo.jar<br>docker run –name mysqldb  -v /mysqldb:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=070014  -p 3306:3306 -d mysql<br>docker save -o myxiaoshuo.tar chen/myxiaoshuo<br>sudo docker load &lt; myxiaoshuo.tar<br>sudo docker save -o myxiaoshuo.tar chen/myxiaoshuo<br>docker run -d -p 49160:22 -p 1521:1521 wnameless/oracle-xe-11g<br>docker run –name mysqldb  -v D:/docker/mysqldbxiaoshuo:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123  -p 3306:3306 -d mysql</p>
+<p>docker run –name mysqldb -p 3306:3306 -v D:\docker\mysqldbfile:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql<br>docker run –name mysqldb -p 3306:3306 -v D:\docker\mysqldbfile:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql –lower_case_table_names=1<br>docker run –rm -v D:/dockerdata:/data alpine ls /data<br>docker run -p 6379:6379 -v D:\docker\redisdb:/data  -d –name redisdb redis redis-server –appendonly yes<br>docker run -d -p 27017:27017 -v D:/docker/mongo:/data/db  –name mongodb mongo –auth<br>db.createUser({ user: ‘chensj’, pwd: ‘123’, roles: [ { role: “userAdminAnyDatabase”, db: “admin” } ] });<br>Successfully added user: {<br>    “user” : “chensj”,<br>    “roles” : [<br>        {<br>            “role” : “userAdminAnyDatabase”,<br>            “db” : “admin”<br>        }<br>    ]<br>}</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/08/test/" rel="next" title="hello-world   //在此处添加你的标题。">
+                <i class="fa fa-chevron-left"></i> hello-world   //在此处添加你的标题。
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 

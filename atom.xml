@@ -35,6 +35,26 @@
   </entry>
   
   <entry>
+    <title>js实现单元格合并</title>
+    <link href="http://yoursite.com/2018/01/09/js%E5%AE%9E%E7%8E%B0%E5%8D%95%E5%85%83%E6%A0%BC%E5%90%88%E5%B9%B6/"/>
+    <id>http://yoursite.com/2018/01/09/js实现单元格合并/</id>
+    <published>2018-01-09T00:55:29.000Z</published>
+    <updated>2018-03-29T16:00:42.647Z</updated>
+    
+    <content type="html"><![CDATA[<p> js实现单元格合并<br><a id="more"></a></p><h1 id="js实现单元格合并"><a href="#js实现单元格合并" class="headerlink" title="js实现单元格合并"></a>js实现单元格合并</h1><p>标签（空格分隔）： js 单元格 合并</p><hr><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">var seq = 1;</span><br><span class="line">var trs = $(&quot;.dataGrid tr&quot;);</span><br><span class="line">var j = 1;</span><br><span class="line">for (var i = 0; i &lt; trs.length - 1; i++) &#123;</span><br><span class="line">    var tds = trs[j].cells;</span><br><span class="line">    var back = trs[i + 1].cells;</span><br><span class="line">    if (i == 0) &#123;</span><br><span class="line">        tds[0].innerHTML = seq;</span><br><span class="line">        seq++;</span><br><span class="line">        continue;</span><br><span class="line">    &#125;</span><br><span class="line">    if (tds[1].innerHTML == back[1].innerHTML) &#123;</span><br><span class="line"></span><br><span class="line">//合并车牌号一列</span><br><span class="line">        trs[i + 1].removeChild(trs[i + 1].cells[0]);</span><br><span class="line">        tds[0].rowSpan = (tds[0].rowSpan | 0) + 1;</span><br><span class="line">// tds[0].innerHTML=seq;</span><br><span class="line">//1次移除</span><br><span class="line">        trs[i + 1].removeChild(trs[i + 1].cells[0]);</span><br><span class="line">        tds[1].rowSpan = (tds[1].rowSpan | 0) + 1;</span><br><span class="line"></span><br><span class="line">//2次移除   cells[]索引的值是tds里的索引减去移除的次数</span><br><span class="line">        trs[i + 1].removeChild(trs[i + 1].cells[0]);</span><br><span class="line">        tds[2].rowSpan = (tds[2].rowSpan | 0) + 1;</span><br><span class="line"></span><br><span class="line">        trs[i + 1].removeChild(trs[i + 1].cells[0]);</span><br><span class="line">        tds[3].rowSpan = (tds[3].rowSpan | 0) + 1;</span><br><span class="line"></span><br><span class="line">        trs[i + 1].removeChild(trs[i + 1].cells[0]);</span><br><span class="line">        tds[4].rowSpan = (tds[4].rowSpan | 0) + 1;</span><br><span class="line"></span><br><span class="line">        trs[i + 1].removeChild(trs[i + 1].cells[0]);</span><br><span class="line">        tds[5].rowSpan = (tds[5].rowSpan | 0) + 1;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        back[0].innerHTML = ++seq;</span><br><span class="line">        j = i + 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; js实现单元格合并&lt;br&gt;
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>java 保留两位小数的方法</title>
     <link href="http://yoursite.com/2018/01/07/java%E4%BF%9D%E7%95%99%E4%B8%A4%E4%BD%8D%E5%B0%8F%E6%95%B0/"/>
     <id>http://yoursite.com/2018/01/07/java保留两位小数/</id>

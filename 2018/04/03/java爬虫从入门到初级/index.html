@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="chenSJ519' Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="java爬虫从入门到初级">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java爬虫从入门到初级">
+<meta property="og:url" content="http://yoursite.com/2018/04/03/java爬虫从入门到初级/index.html">
+<meta property="og:site_name" content="chenSJ519&#39; Blog">
+<meta property="og:description" content="java爬虫从入门到初级">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://static.zybuluo.com/chenSJ/8sdd9795e1j5tzgw91a85z2b/2018-04-02_233144.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/chenSJ/0ivcudbebbnmakg431nm2zav/2018-04-02_234037.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/chenSJ/ofmwtamnb9qk9ohwtlujiyoy/2018-04-02_234417.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/chenSJ/zsls4jxdze4sq44bcwo57rmv/2018-04-02_234809.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/chenSJ/bvxqo06ikfqq7s7w9np2o9kc/2018-04-03_114050.jpg">
+<meta property="og:updated_time" content="2018-04-03T09:52:41.878Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java爬虫从入门到初级">
+<meta name="twitter:description" content="java爬虫从入门到初级">
+<meta name="twitter:image" content="http://static.zybuluo.com/chenSJ/8sdd9795e1j5tzgw91a85z2b/2018-04-02_233144.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/03/java爬虫从入门到初级/"/>
+
+
+
+
+
+  <title>java爬虫从入门到初级 | chenSJ519' Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">chenSJ519' Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Man can only rely on himself</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/java爬虫从入门到初级/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenSJ519">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chenSJ519' Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">java爬虫从入门到初级</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-03T08:55:29+08:00">
+                2018-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java-爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">java 爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/03/java爬虫从入门到初级/" class="leancloud_visitors" data-flag-title="java爬虫从入门到初级">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  6,668
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  32
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p> java爬虫从入门到初级<br><a id="more"></a></p>
+<h1 id="java爬虫从入门到初级"><a href="#java爬虫从入门到初级" class="headerlink" title="java爬虫从入门到初级"></a>java爬虫从入门到初级</h1><p>标签（空格分隔）： java 爬虫 入门 webmagic</p>
+<hr>
+<p>##前言<br>由于这些天要进行一些交接任务，公司要求把所有相关爬虫的东西都总结成技术文档才算交接完成。所以干脆写篇java爬虫教程。我所学的一切都是网上自己找的相关文章，读Webmagic源代码而来，非常感谢网络上很多无私的人分享自己的代码，所以这篇教程我也分享一下，也许其中的方案并不是最好的，但至少能为后面的人少走点弯路。</p>
+<p>首先我要说明一下，这个webmagic爬虫框架其实也是作者仿照python爬虫框架的而写的，如果你学完了这个java实现的爬虫框架，并且能读懂它的大部分源码，再学习python的pyspider及scrapy这类爬虫框架，是会非常快的，并且他们解决问题的思路其实也是可以从java的搬到python,或者从python搬到java上。</p>
+<p>这篇文章不是为了手把手的教，只是描述学习的过程，记录一下学习的经验。和让后面学习的人少走一些弯路。所以过程略显跳跃。。。</p>
+<p>##1.开始<br><a href="http://webmagic.io/docs/zh/。首先先把这篇Webmagic作者的文章弄懂就可以写一个简单的爬虫了。其中要注意的是作者介绍了一种注解的方式编写爬虫，这种方式虽然看起来简洁优雅，但这些注解并没有做到像非注解方式的灵活，而且注解的方式也增加了debug的难度，所以我并不推荐大家用这种方式写爬虫。" target="_blank" rel="noopener">http://webmagic.io/docs/zh/。首先先把这篇Webmagic作者的文章弄懂就可以写一个简单的爬虫了。其中要注意的是作者介绍了一种注解的方式编写爬虫，这种方式虽然看起来简洁优雅，但这些注解并没有做到像非注解方式的灵活，而且注解的方式也增加了debug的难度，所以我并不推荐大家用这种方式写爬虫。</a></p>
+<p>##2.提取表达式<br><img src="http://static.zybuluo.com/chenSJ/8sdd9795e1j5tzgw91a85z2b/2018-04-02_233144.jpg" alt="2018-04-02_233144.jpg-212.1kB"></p>
+<p>  webmagic提取字段的方式有xpath与jsoup这两种。jsoup类似于jquery的选取方式，解析效率高，容易用肉眼写出提取表达式。但不推荐一开始就用这个，后期优化效率可以用这个。xpath的原理就是dom4j的xpath表达式，表达式一般要借用chrome插件，用了这个插件后，开发时会很快<br>  xpath helper，这个插件的用法读图中的英文介绍就能知道怎么用了，就不啰嗦了。<br>  <img src="http://static.zybuluo.com/chenSJ/0ivcudbebbnmakg431nm2zav/2018-04-02_234037.jpg" alt="2018-04-02_234037.jpg-266.3kB"><br>  如果想要提取文章标题的xpath表达式，使用xpath helper插件后，可以简化一下表达式（注意，表达式太过于长的话，也许是会报错的）<br><img src="http://static.zybuluo.com/chenSJ/ofmwtamnb9qk9ohwtlujiyoy/2018-04-02_234417.jpg" alt="2018-04-02_234417.jpg-379.6kB"><br>我们只取最后一部分，然后使开头为“//”代表非根路径，然后图中的标题也都选中了，说明这种简化表达式是ok的<br><img src="http://static.zybuluo.com/chenSJ/zsls4jxdze4sq44bcwo57rmv/2018-04-02_234809.jpg" alt="2018-04-02_234809.jpg-362.7kB"></p>
+<p>  读者看完这些后，其实可以找个网站实战一下了简单的爬取了。</p>
+<p>##3.Request对象<br>这个对象看起来不怎么起眼，其实，能实现的功能有的时候非常强大，但官网中又没有对他进行详细的介绍，当时也是坑在这上面了。这里介绍他的常用方式<img src="http://static.zybuluo.com/chenSJ/bvxqo06ikfqq7s7w9np2o9kc/2018-04-03_114050.jpg" alt="2018-04-03_114050.jpg-154.3kB">。</p>
+<p>###3.1 request.setPriority(0)<br>第一个方法’request.setPriority(0)’这个方法是设置这个url在当前url队列中的优先级的，在默认情况下，url的队列是遵循FIFO(先进先出）的方式，但有时，我们觉得这个url优等级比较高，比如在爬取天猫的时候先搜索得到商品列表url，再得到商品详情页的url，再提取信息，这个时候由于商品url列表在队列的最前方，商品详情的url在队列的后方，那么只有等到最后面，爬虫才会爬取商品详情。可能在数据量不多的时候不会有什么问题，但数据量多了话，要等很久才能爬到商品详情页，有的时候万一项目宕机了，那还没爬取到详情页就gg了，那之前的功夫也就白费了（当然这可以用文件或者redis实现断电续爬的功能），所以要设置优先级。数越大，优先级越高。当然一定要设置<code>spider.setScheduler(new PriorityScheduler());</code>这是url队列在内存上的一种设置方式，也可以用<code>spider.setScheduler(new RedisPriorityScheduler(&quot;localhost&quot;));</code>这种方式，这样url队列是在redis上了,在redis上的好处是能实现断点续爬，并且能实现多机器分布式。</p>
+<p>###3.2 request.setBinaryContent(true)<br>如果你想把图片的url放入url队列，那么可以使用这种方式。判断是否图片用<code>request.isBinaryContent();</code>方式。这个方法的好处是免去了webmagic把图片转成文本的不必要步骤。</p>
+<p>###3.3 request.putExtra()<br>这个方法的主要用途是，如果你想在子url中得到父url的相关信息，那么在父url那么可以把相关的信息设置进去。然后用<code>page.getRequest().getExtra()</code>来提取当时在父url放置的相关信息。</p>
+<p>###3.4 request.setMethod(HttpConstant.Method.POST);<br>如果你想使用post请求那么可以使用这个方法，注意，如果请求是post的话，即使是相同的url，也不会进行url去重，<br><figure class="highlight plain"><figcaption><span>"utf-8"));```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">post表单这样就可以设置进去了。</span><br><span class="line">###3.4 request.addCookie()</span><br><span class="line">如果请求需要特定的cookie的话，那么可以用这种方式。在Site对像使用这个方法，即为全局cookie</span><br><span class="line">##4 网页渲染的网站如何爬取</span><br><span class="line">这个有几种方式,如何这个网站只是简单的把json渲染，那么用page.getJson().jsonPath()就可以搞定了。</span><br><span class="line">如果这个网站特意做了反爬虫，那么只能用无界浏览器来了，无界浏览器分为几种，</span><br><span class="line">### 4.1 htmlutil</span><br><span class="line">一种是纯java实现的——htmlutil。这个的特点就是快，如果你想在java中执行javascript,那么可以用这个，但如果是渲染js那还是不要用这个方式了，因为它并不完全仿真浏览器。</span><br><span class="line">### 4.2 Selenium</span><br><span class="line">这个工具本意是用途自动化测试用的，https://www.seleniumhq.org/（可能要翻墙）它可以结合chrome,firefox,IE,phantomjs,不过也用于爬虫。不过用这个速度启动偏慢。</span><br><span class="line">### 4.3 phantomjs  </span><br><span class="line">这个可以说是爬虫中的大杀器了，因为它就是真的浏览器的内核实现的，webkit内核。模拟真实访问难以分辨，而且这个是没有界面的，所以爬的速度是超过有界浏览器，但慢于httpclient。这是http://phantomjs.org/api/ 官网，遗憾的是由于chrome在最新的版本中也加上了无界的特性（headless），使phantomjs的作者感觉这个项目已经没有维护的必要了。在2017年4月的时候，phantomjs作者正式说明停止维护。https://www.oschina.net/news/84158/vitaly-stepping-down-as-maintainer</span><br><span class="line">虽然如此，但大量的老项目仍然还是使用这个无界浏览器，所以学会这个也是有用的。而chrome推出的这个新功能的浏览器，我在2017年12月份的时候到官网研究过，发现这个东西那个时候还没有完善起来。现在也不知道完善到什么程度了。</span><br><span class="line"></span><br><span class="line">#### 4.3.1 Selenium操作phantomjs的方法</span><br><span class="line">一种是用Selenium来操作,由于phantomjs不维护了，最新的selenium已经不支持phantomjs了</span><br><span class="line">http://phantomjs.org 下载phantomjs。</span><br></pre></td></tr></table></figure></p>
+<p><dependency><br>      <groupid>org.seleniumhq.selenium</groupid><br>      <artifactid>selenium-java</artifactid><br>      <version>3.4.0</version><br></dependency><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">这是入门级Demo:</span><br><span class="line">http://www.cnblogs.com/shirandedan/p/6802763.html</span><br><span class="line">https://my.oschina.net/flashsword/blog/147334</span><br><span class="line">好文章推荐：https://zhuanlan.zhihu.com/p/25507989</span><br><span class="line">https://www.jianshu.com/p/9d408e21dc3a</span><br><span class="line">截屏方法：</span><br></pre></td></tr></table></figure></p>
+<p> File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是我仿照例子写的驱动池。目地是为了解决phantomjs不支持多线程的问题。我其中注解的东西，可以根据实际情况使用他。</span><br></pre></td></tr></table></figure></p>
+<p>package com.crawler.selenium;</p>
+<p>/**</p>
+<ul>
+<li>Created by chenshengju on 2017/9/20 0020.<br>*/</li>
+</ul>
+<p>import com.crawler.industry.config.CrawlerConfig;<br>import com.crawler.proxyutils.XdailiUtils;<br>import org.openqa.selenium.WebDriver;<br>import org.openqa.selenium.phantomjs.PhantomJSDriver;<br>import org.openqa.selenium.phantomjs.PhantomJSDriverService;<br>import org.openqa.selenium.remote.DesiredCapabilities;<br>import org.slf4j.Logger;<br>import org.slf4j.LoggerFactory;<br>import us.codecraft.webmagic.proxy.Proxy;</p>
+<p>import java.io.File;<br>import java.util.concurrent.BlockingDeque;<br>import java.util.concurrent.LinkedBlockingDeque;<br>import java.util.concurrent.TimeUnit;<br>import java.util.concurrent.atomic.AtomicInteger;</p>
+<p>/**</p>
+<ul>
+<li><p>@author taojw<br>*/<br>public class WebPhantomJsDriverPool implements WebDriverPool{<br> private Logger logger = LoggerFactory.getLogger(getClass());<br> private int CAPACITY = 5;<br> private AtomicInteger refCount = new AtomicInteger(0);<br> private static final String DRIVER_PHANTOMJS = “phantomjs”;</p>
+<p> /**</p>
+<ul>
+<li>store webDrivers available<br>*/<br>private BlockingDeque<webdriver> innerQueue = new LinkedBlockingDeque<webdriver>(<pre><code>CAPACITY);
+</code></pre>/**</webdriver></webdriver></li>
+<li><p>默认驱动是在当前目录中<br>*/<br>private static String PHANTOMJS_PATH;<br>private static DesiredCapabilities caps = DesiredCapabilities.phantomjs();</p>
+<p>static {<br>//        String[] phantomArgs = new  String[] {<br>////                “–webdriver-loglevel=INFO”,<br>//                “–webdriver-loglevel=NONE”,<br>////                “–webdriver-loglevel=DEBUG”,<br>//////                ,”–load-images=no”<br>//                “–disk-cache=true”,<br>////                “–disk-cache=false”,<br>//                “–disk-cache-path=cache”<br>////                “–offline-storage-path=d:/hh”<br>//        };<br> String[] phantomArgs = PhantomjsConfig.phantomArgs;<br>//        caps.setCapability(“phantomjs.page.settings.loadImages”,false);<br> //判断当前系统是windos还是linux<br> String os = System.getProperty(“os.name”);<br> if(os.toLowerCase().startsWith(“win”)){</p>
+<pre><code>PHANTOMJS_PATH = new File(&quot;resources/phantomjs.exe&quot;).getAbsolutePath();
+</code></pre><p> }else<br> {</p>
+<pre><code>PHANTOMJS_PATH = new File(&quot;resources/phantomjs&quot;).getAbsolutePath();
+</code></pre><p> }</p>
+<p> caps.setJavascriptEnabled(true);<br> caps.setCapability(</p>
+<pre><code>PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
+PHANTOMJS_PATH);
+</code></pre><p> caps.setCapability(“takesScreenshot”, false);<br> caps.setCapability(</p>
+<pre><code>PhantomJSDriverService.PHANTOMJS_PAGE_CUSTOMHEADERS_PREFIX
+        + &quot;User-Agent&quot;,
+&quot;Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36&quot;);
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<p>//        caps.setCapability(<br>//                PhantomJSDriverService.PHANTOMJS_PAGE_CUSTOMHEADERS_PREFIX<br>//                        + “Proxy-Authorization”,<br>//                XdailiUtils.getProxyHeader());<br>        caps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, phantomArgs);</p>
+<pre><code>}
+
+public WebPhantomJsDriverPool() {
+}
+
+public  WebPhantomJsDriverPool(int poolsize) {
+    this.CAPACITY = poolsize;
+    innerQueue = new LinkedBlockingDeque&lt;WebDriver&gt;(poolsize);
+}
+
+public  WebDriver get() throws InterruptedException {
+    WebDriver poll = innerQueue.poll();
+    if (poll != null) {
+        return poll;
+    }
+    if (refCount.get() &lt; CAPACITY) {
+        synchronized (innerQueue) {
+            if (refCount.get() &lt; CAPACITY) {
+
+                PhantomJSDriver mDriver = new PhantomJSDriver(caps);
+</code></pre><p>//                    mDriver.executePhantomJS(“phantom.setProxy(‘139.196.172.79:80’)”);<br>                    mDriver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);<br>                    mDriver.manage().timeouts().pageLoadTimeout(100,TimeUnit.SECONDS);<br>                    mDriver.manage().timeouts().setScriptTimeout(10,TimeUnit.SECONDS);<br>                    mDriver.manage().window().maximize();<br>                    // mDriver.manage().window().setSize(new Dimension(1366,<br>                    // 768));<br>                    innerQueue.add(mDriver);<br>                    refCount.incrementAndGet();<br>                }<br>            }<br>        }<br>        return innerQueue.take();<br>    }</p>
+<pre><code>public void returnToPool(WebDriver webDriver) {
+    // webDriver.quit();
+    // webDriver=null;
+    innerQueue.add(webDriver);
+}
+
+public void close(WebDriver webDriver) {
+    refCount.decrementAndGet();
+    webDriver.close();
+    webDriver.quit();
+    webDriver = null;
+}
+
+public void shutdown() {
+    try {
+        for (WebDriver driver : innerQueue) {
+            close(driver);
+        }
+        innerQueue.clear();
+    } catch (Exception e) {
+</code></pre><p>//            e.printStackTrace();<br>            logger.warn(“webdriverpool关闭失败”, e);<br>        }<br>    }</p>
+<pre><code>@Override
+public void setProxy(WebDriver webDriver, Proxy proxy) {
+    PhantomJSDriver.class.cast(webDriver).executePhantomJS(&quot;phantom.setProxy(&apos;&quot;+proxy.getHost()+&quot;&apos;, &quot;+proxy.getPort()+&quot;)&quot;);
+}
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 4.3.2纯js操作phantomjs的方法</span><br><span class="line">入门级Demo:https://blog.csdn.net/imlsz/article/details/24325623</span><br><span class="line">下载的phantomjs有的example文件夹，里面都是例子，可以和http://phantomjs.org/api/结合起来学习。</span><br><span class="line">这种方式，相比Selenuim的方式，要麻烦不少，但他非常的快。</span><br><span class="line">![2018-04-03_155756.jpg-275.8kB][6]</span><br><span class="line">  </span><br><span class="line">#### 4.3.3CasperJS操作phantomjs的方法</span><br><span class="line">  casperJs是对操作phantomjs的js进行了一次封装，相比纯js的方法要简单不少，我没有用过，不过看过一个开源项目，有个大佬用这个来操作phantomjs破解极验。（当然是以前的极验）。官网：http://casperjs.org/</span><br><span class="line">这是这个大佬开源项目的地址：https://gitee.com/shentong_012/YayCrawler</span><br><span class="line">这是casperJs和java相关代码：</span><br></pre></td></tr></table></figure></p>
+<p>package yaycrawler.common.utils;</p>
+<p>import org.apache.commons.lang3.StringUtils;<br>import org.slf4j.Logger;<br>import org.slf4j.LoggerFactory;</p>
+<p>import java.io.*;<br>import java.util.List;<br>import java.util.concurrent.Semaphore;</p>
+<p>/**</p>
+<ul>
+<li>管理Casperjs的启动和执行</li>
+<li><p>Created by ucs_yuananyun on 2016/6/23.<br>*/<br>public class CasperjsProgramManager {<br> private static Logger logger = LoggerFactory.getLogger(CasperjsProgramManager.class);<br> public static String launch(String jsFileName, List<string> params) {</string></p>
+<pre><code>return launch(jsFileName, null, params);
+</code></pre><p> }<br> public static String launch(String jsFileName, String pageCharset,List<string> params) {</string></p>
+<pre><code>if (StringUtils.isBlank(jsFileName)) {
+    logger.error(&quot;待执行的js文件名不能为空！&quot;);
+    return null;
+}
+BufferedReader br = null;
+try {
+    if(pageCharset==null) pageCharset = &quot;utf-8&quot;;
+    String path = CasperjsProgramManager.class.getResource(&quot;/&quot;).getPath();
+    path = path.substring(1, path.lastIndexOf(&quot;/&quot;) + 1);
+    String os = System.getProperties().getProperty(&quot;os.name&quot;);
+    String casperJsPath = &quot;&quot;;
+    String phantomJsPath = &quot;&quot;;
+    if (StringUtils.startsWithIgnoreCase(os, &quot;win&quot;)) {
+        casperJsPath = path + &quot;casperjs/bin/casperjs.exe&quot;;
+        phantomJsPath = path + &quot;phantomjs/window/phantomjs.exe&quot;;
+    } else {
+        path = &quot;/&quot; + path;
+        casperJsPath = path + &quot;casperjs/bin/casperjs&quot;;
+        phantomJsPath = path + &quot;phantomjs/linux/phantomjs&quot;;
+    }
+    logger.info(&quot;CasperJs程序地址:{}&quot;, casperJsPath);
+    ProcessBuilder processBuilder = new ProcessBuilder(casperJsPath, jsFileName);
+    if (params != null) {
+        for (String param : params) {
+            processBuilder.command().add(param);
+        }
+    }
+    processBuilder.command().add(&quot;--output-encoding=&quot;+pageCharset);
+    processBuilder.command().add(&quot;--web-security=no&quot;);
+    processBuilder.command().add(&quot;--ignore-ssl-errors=true&quot;);
+
+    processBuilder.directory(new File(path + &quot;casperjs/js&quot;));
+    processBuilder.environment().put(&quot;PHANTOMJS_EXECUTABLE&quot;, phantomJsPath);
+
+    Process p = processBuilder.start();
+    InputStream is = p.getInputStream();
+    br = new BufferedReader(new InputStreamReader(is, pageCharset));
+    StringBuffer sbf = new StringBuffer();
+    String tmp = &quot;&quot;;
+    while ((tmp = br.readLine()) != null) {
+        sbf.append(tmp).append(&quot;\r\n&quot;);
+    }
+    br.close();
+    p.destroy();
+    return sbf.toString();
+} catch (IOException ex) {
+    logger.error(ex.getMessage());
+    return null;
+} finally {
+    if(br != null)
+        try {
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+}
+</code></pre><p> }</p>
+</li>
+</ul>
+<p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 4.4 Headless Chrome</span><br><span class="line">这个上文提到的让phantomjs作者失业的新一代无界浏览器，也许是将来流行的无界浏览器。</span><br><span class="line">官网：https://developers.google.cn/web/updates/2017/04/headless-chrome</span><br><span class="line">下载：https://sites.google.com/a/chromium.org/chromedriver/</span><br><span class="line">## 5.0 webmagic结合Selenium模拟点击动作</span><br><span class="line">这个刚开始确实是个难题，直到我看到了这个文章：https://segmentfault.com/a/1190000008194764</span><br><span class="line">所以借鉴这个思路，我自己实现了一个selenium的下载器，它可以放置动作，切换下载器。可以参考一下</span><br></pre></td></tr></table></figure>
+<p>package com.crawler.selenium;</p>
+<p>import org.openqa.selenium.By;<br>import org.openqa.selenium.Cookie;<br>import org.openqa.selenium.WebDriver;<br>import org.openqa.selenium.WebElement;<br>import org.slf4j.Logger;<br>import org.slf4j.LoggerFactory;<br>import us.codecraft.webmagic.Page;<br>import us.codecraft.webmagic.Request;<br>import us.codecraft.webmagic.Site;<br>import us.codecraft.webmagic.Task;<br>import us.codecraft.webmagic.downloader.AbstractDownloader;<br>import us.codecraft.webmagic.downloader.HttpClientDownloader;<br>import us.codecraft.webmagic.proxy.Proxy;<br>import us.codecraft.webmagic.proxy.ProxyProvider;<br>import us.codecraft.webmagic.selector.PlainText;<br>import us.codecraft.webmagic.utils.HttpClientUtils;</p>
+<p>import java.util.Map;</p>
+<p>/**</p>
+<ul>
+<li><p>Created by chenshengju on 2017/9/20 0020.<br>*/<br>public class SeleniumDownloader  extends AbstractDownloader {<br> private static final Logger log= LoggerFactory.getLogger(SeleniumDownloader.class);<br> private int sleepTime=3000;//3s<br> private SeleniumAction action=null;<br> private WebDriverPool webDriverPool=new WebPhantomJsDriverPool();<br> private HttpClientDownloader httpClientDownloader=new HttpClientDownloader();<br> private ProxyProvider proxyProvider;</p>
+<p> public SeleniumDownloader(){<br> }<br> public SeleniumDownloader(WebDriverPool pool){</p>
+<pre><code>this(null,pool,null);
+</code></pre><p> }<br> public SeleniumDownloader(SeleniumAction action){</p>
+<pre><code>this(null,null,action);
+</code></pre><p> }<br> public SeleniumDownloader (Integer sleepTime) {</p>
+<pre><code>this(sleepTime,null,null);
+</code></pre><p> }<br> public SeleniumDownloader(Integer sleepTime, WebDriverPool pool, SeleniumAction action){</p>
+<pre><code>if(sleepTime!=null)
+{
+    this.sleepTime=sleepTime;
+}
+if(action!=null)
+{
+    this.action=action;
+}
+if(pool!=null){
+    webDriverPool=pool;
+}
+</code></pre><p> }<br> public void setProxyProvider(ProxyProvider proxyProvider) {</p>
+<pre><code>this.httpClientDownloader.setProxyProvider(proxyProvider);
+this.proxyProvider = proxyProvider;
+</code></pre><p> }</p>
+<p> @Override<br> public Page download(Request request, Task task) {</p>
+<pre><code>Proxy proxy = proxyProvider != null ? proxyProvider.getProxy(task) : null;
+ Site site = task.getSite();
+ WebDriverPool webDriverPoolNow=webDriverPool;
+ if( request.getExtra(SeleniumDownloaderService.FAST_DOWNLOAD)!=null)
+ {
+
+     return httpClientDownloader.download(request,task);
+ }
+ if(request.getExtra(SeleniumDownloaderService.OTHER_WEB_DRIVER)!=null)
+ {
+     webDriverPoolNow = (WebDriverPool) request.getExtra(SeleniumDownloaderService.OTHER_WEB_DRIVER);
+
+ }
+
+ WebDriver webDriver;
+ try {
+     webDriver = webDriverPoolNow.get();
+     if(site.isDisableCookieManagement())
+     {
+         webDriver.manage().deleteAllCookies();
+     }
+     if(proxyProvider!=null)
+     {
+         webDriverPoolNow.setProxy(webDriver,proxy);
+     }
+ } catch (InterruptedException e) {
+     log.warn(&quot;interrupted&quot;, e);
+     return null;
+ }
+ log.info(&quot;downloading page &quot; + request.getUrl());
+ //内容
+ String content=&quot;&quot;;
+ Page page = new Page();
+ WebDriver.Options manage = webDriver.manage();
+ if (site.getCookies() != null) {
+     for (Map.Entry&lt;String, String&gt; cookieEntry : site.getCookies()
+             .entrySet()) {
+         Cookie cookie = new Cookie(cookieEntry.getKey(),
+                 cookieEntry.getValue());
+         manage.addCookie(cookie);
+     }
+ }
+ try {
+     webDriver.get(request.getUrl());
+     Thread.sleep(sleepTime);
+ } catch (InterruptedException e) {
+     e.printStackTrace();
+ } catch (Exception e) {
+     e.printStackTrace();
+     webDriverPoolNow.close(webDriver);
+     onError(request);
+</code></pre><p>//            page.setSkip(true);</p>
+<pre><code>    return Page.fail();
+}
+WebElement webElement = webDriver.findElement(By.xpath(&quot;/html&quot;));
+content=webElement.getAttribute(&quot;outerHTML&quot;);
+page.setRawText(content);
+page.setRequest(request);
+</code></pre><p>//        WindowUtil.changeWindow(webDriver);</p>
+</li>
+</ul>
+<p>//        manage.window().maximize();<br>        if(action!=null){<br>            try {<br>                action.execute(webDriver);<br>            } catch (Exception e) {<br>                e.printStackTrace();<br>            }<br>        }<br>        SeleniumAction reqAction=(SeleniumAction) request.getExtra(SeleniumDownloaderService.ACTION);<br>        if(reqAction!=null){<br>            try {<br>               reqAction.execute(webDriver);<br>                Thread.sleep(sleepTime);<br>            } catch (Exception e) {<br>                webDriverPoolNow.close(webDriver);<br>                log.error(“浏览器发生异常”+e.getMessage());<br>                e.printStackTrace();<br>            }<br>        }<br>        Object obj = request.getExtra(SeleniumDownloaderService.ACTION_HTMLS);<br>        if(obj !=null)<br>        {<br>            if(obj instanceof SeleniumHtmlAction)<br>            {<br>                try {<br>                    ((SeleniumHtmlAction)obj).execute(webDriver,page);<br>                    Thread.sleep(sleepTime);<br>                } catch (Exception e) {<br>                    webDriverPoolNow.close(webDriver);<br>                    onError(request);<br>                    log.error(“浏览器发生异常”+e.getMessage());<br>                    e.printStackTrace();<br>                    return Page.fail();<br>                }<br>            }else if(obj instanceof SeleniumHtmlAction[])<br>            {</p>
+<pre><code>        SeleniumHtmlAction[] htmlActionList=(SeleniumHtmlAction[]) obj;
+        try {
+            for (SeleniumHtmlAction seleniumAction : htmlActionList) {
+                seleniumAction.execute(webDriver,page);
+            }
+        } catch (Exception e) {
+            webDriverPoolNow.close(webDriver);
+            onError(request);
+            log.error(&quot;浏览器发生异常&quot;+e.getMessage());
+            e.printStackTrace();
+            return Page.fail();                }
+    }else{
+        throw new RuntimeException(SeleniumDownloaderService.ACTION_HTMLS+&quot;只能为SeleniumHtmlAction的实现类或数组&quot;);
+    }
+
+}
+</code></pre><p>//        page.setHtml(new Html(UrlUtils.fixAllRelativeHrefs(content,<br>//                webDriver.getCurrentUrl())));<br>//        page.setUrl(new PlainText(webDriver.getCurrentUrl()));<br>        page.setUrl(new PlainText(request.getUrl()));<br>        page.setRequest(request);<br>//        page.setStatusCode(httpResponse.getStatusLine().getStatusCode());<br>        page.setDownloadSuccess(true);<br>//        if (this.responseHeader) {<br>//            page.setHeaders(HttpClientUtils.convertHeaders(httpResponse.getAllHeaders()));<br>//        }<br>        webDriverPoolNow.returnToPool(webDriver);<br>        if (proxyProvider != null &amp;&amp; proxy != null) {<br>            proxyProvider.returnProxy(proxy, page, task);<br>        }<br>        return page;<br>    }</p>
+<pre><code>@Override
+public void setThread(int thread) {
+    this.httpClientDownloader.setThread(thread);
+    this.httpClientDownloader.setProxyProvider(this.proxyProvider);
+}
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">package com.crawler.selenium;</span><br><span class="line"></span><br><span class="line">import org.openqa.selenium.WebDriver;</span><br><span class="line">import us.codecraft.webmagic.Page;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by chenshengju on 2017/9/25 0025.</span><br><span class="line"> */</span><br><span class="line">public interface SeleniumHtmlAction &#123;</span><br><span class="line">    void execute(WebDriver driver, Page page) throws Exception;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">package com.crawler.selenium;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by chenshengju on 2017/9/30 0030.</span><br><span class="line"> * 用于拓展Request的一种方法</span><br><span class="line"> */</span><br><span class="line">public class SeleniumDownloaderService &#123;</span><br><span class="line">    //是否使是httpClient下载</span><br><span class="line">    public static final String FAST_DOWNLOAD=&quot;fastDownload&quot;;</span><br><span class="line">    //是否用其他的驱动来下载</span><br><span class="line">    public static final String OTHER_WEB_DRIVER=&quot;otherWebDriver&quot;;</span><br><span class="line">    //是否是一得到page的动作</span><br><span class="line">    public static final String ACTION_HTMLS=&quot;actionHtmls&quot;;</span><br><span class="line">    //是否是动作</span><br><span class="line">    public static final String ACTION=&quot;action&quot;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我用这个在天眼查网站上进行过翻页爬取。天猫还没试过</p>
+<h2 id="6-断点继爬"><a href="#6-断点继爬" class="headerlink" title="6.断点继爬"></a>6.断点继爬</h2><p>webmagic自带的方案是文件系统，和redis,<br>文件系统：<code>spider.setScheduler(new FileCacheQueueScheduler(&quot;&quot;))</code><br>redis:<code>spider.setScheduler(new RedisPriorityScheduler(&quot;&quot;));</code><br>但遗憾的是这两种方式在我使用中和读源码后发现都有一定的缺陷（0.7.3版本中）<br>所以我自己实现了一种redis断点的方案<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br></pre></td><td class="code"><pre><span class="line">package com.jgs;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by chenshengju on 2018/2/14.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">import com.alibaba.fastjson.JSON;</span><br><span class="line">import org.apache.commons.codec.digest.DigestUtils;</span><br><span class="line">import org.apache.commons.lang3.StringUtils;</span><br><span class="line">import redis.clients.jedis.Jedis;</span><br><span class="line">import redis.clients.jedis.JedisPool;</span><br><span class="line">import redis.clients.jedis.JedisPoolConfig;</span><br><span class="line">import us.codecraft.webmagic.Request;</span><br><span class="line">import us.codecraft.webmagic.Task;</span><br><span class="line">import us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler;</span><br><span class="line">import us.codecraft.webmagic.scheduler.MonitorableScheduler;</span><br><span class="line">import us.codecraft.webmagic.scheduler.component.DuplicateRemover;</span><br><span class="line"></span><br><span class="line">import java.util.Set;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Use Redis as url scheduler for distributed crawlers.&lt;br&gt;</span><br><span class="line"> *</span><br><span class="line"> * @author code4crafter@gmail.com &lt;br&gt;</span><br><span class="line"> * @since 0.2.0</span><br><span class="line"> */</span><br><span class="line">public class FIFOPriorityRedisScheduler extends DuplicateRemovedScheduler implements MonitorableScheduler, DuplicateRemover &#123;</span><br><span class="line"></span><br><span class="line">    protected JedisPool pool;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    private static final String QUEUE_PREFIX = &quot;queue_&quot;;</span><br><span class="line"></span><br><span class="line">    private static final String PRIORITY_PREFIX = &quot;priority_&quot;;</span><br><span class="line"></span><br><span class="line">    private static final String PRIORITYNUM_PREFIX = &quot;priorityNum_&quot;;</span><br><span class="line"></span><br><span class="line">    private static final String SET_PREFIX = &quot;set_&quot;;</span><br><span class="line"></span><br><span class="line">    private static final String ITEM_PREFIX = &quot;item_&quot;;</span><br><span class="line"></span><br><span class="line">    private static final String BREAK_PREFIX = &quot;break_&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public FIFOPriorityRedisScheduler(String host )&#123;</span><br><span class="line">        this(new JedisPool(new JedisPoolConfig(), host));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public FIFOPriorityRedisScheduler(JedisPool pool) &#123;</span><br><span class="line">        this.pool = pool;</span><br><span class="line">        setDuplicateRemover(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void resetDuplicateCheck(Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            jedis.del(getSetKey(task));</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public boolean isDuplicate(Request request, Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            return jedis.sadd(getSetKey(task), request.getUrl()) == 0;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void pushWhenNoDuplicate(Request request, Task task) &#123;</span><br><span class="line">        long priority=  request.getPriority();</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            jedis.zadd(getPriorityNumKey(task),priority,priority+&quot;&quot;);</span><br><span class="line">            jedis.rpush(getQueueKey(task,priority+&quot;&quot;), request.getUrl());</span><br><span class="line">            jedis.rpush(getBreakKey(task), request.getUrl());</span><br><span class="line">            if (CheckForAdditionalInfo(request)) &#123;</span><br><span class="line">                String field = DigestUtils.shaHex(request.getUrl());</span><br><span class="line">                String value = JSON.toJSONString(request);</span><br><span class="line">                jedis.hset((ITEM_PREFIX + task.getUUID()), field, value);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected boolean CheckForAdditionalInfo(Request request) &#123;</span><br><span class="line">        if (request == null) &#123;</span><br><span class="line">            return false;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (!request.getHeaders().isEmpty() || !request.getCookies().isEmpty()) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (StringUtils.isNotBlank(request.getCharset()) || StringUtils.isNotBlank(request.getMethod())) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (request.isBinaryContent() || request.getRequestBody() != null) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (request.getExtras() != null &amp;&amp; !request.getExtras().isEmpty()) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">        if (request.getPriority() != 0L) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public synchronized Request poll(Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            String url=null;</span><br><span class="line">            Set&lt;String&gt; prioritySet = jedis.zrevrange(getPriorityNumKey(task), 0, -1);</span><br><span class="line">            for (String priority : prioritySet) &#123;</span><br><span class="line">                 url= jedis.lpop(getQueueKey(task, priority));</span><br><span class="line">                 if(url!=null)</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">            if (url == null) &#123;</span><br><span class="line">                return null;</span><br><span class="line">            &#125;</span><br><span class="line">            String key = ITEM_PREFIX + task.getUUID();</span><br><span class="line">            String field = DigestUtils.shaHex(url);</span><br><span class="line">            byte[] bytes = jedis.hget(key.getBytes(), field.getBytes());</span><br><span class="line">            if (bytes != null) &#123;</span><br><span class="line">                Request o = JSON.parseObject(new String(bytes), Request.class);</span><br><span class="line">                return o;</span><br><span class="line">            &#125;</span><br><span class="line">            Request request = new Request(url);</span><br><span class="line">            return request;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected String getSetKey(Task task) &#123;</span><br><span class="line">        return SET_PREFIX + task.getUUID();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected  String getQueueKey(Task task,String priority) &#123;</span><br><span class="line">        return PRIORITY_PREFIX + priority + QUEUE_PREFIX + task.getUUID();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    protected  String getBreakKey(Task task) &#123;</span><br><span class="line">        return BREAK_PREFIX  + task.getUUID();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    protected  String getPriorityNumKey(Task task) &#123;</span><br><span class="line">        return PRIORITYNUM_PREFIX  + task.getUUID();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    protected String getItemKey(Task task) &#123;</span><br><span class="line">        return ITEM_PREFIX + task.getUUID();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int getLeftRequestsCount(Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        long size=0;</span><br><span class="line">        try &#123;</span><br><span class="line">            Set&lt;String&gt; prioritySet = jedis.zrevrange(getPriorityNumKey(task), 0, -1);</span><br><span class="line">            for (String priority : prioritySet)</span><br><span class="line">            &#123;</span><br><span class="line"></span><br><span class="line">                 size+=jedis.llen(getQueueKey(task,priority));</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return (int) size;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public int getTotalRequestsCount(Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            Long size = jedis.scard(getSetKey(task));</span><br><span class="line">            return size.intValue();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public interface CanBreak &#123;</span><br><span class="line">       void removeBreak(String url,Task task);</span><br><span class="line">       List getAllQueue(Task task);</span><br><span class="line">       List getBreakQueue(Task task);</span><br><span class="line"></span><br><span class="line">    void addQueue(List&lt;String&gt; breakQueue,Task task);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">package com.jgs;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by chenshengju on 2018/2/14.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">import com.alibaba.fastjson.JSON;</span><br><span class="line">import org.apache.commons.codec.digest.DigestUtils;</span><br><span class="line">import org.apache.commons.lang3.StringUtils;</span><br><span class="line">import redis.clients.jedis.Jedis;</span><br><span class="line">import redis.clients.jedis.JedisPool;</span><br><span class="line">import redis.clients.jedis.JedisPoolConfig;</span><br><span class="line">import us.codecraft.webmagic.Request;</span><br><span class="line">import us.codecraft.webmagic.Task;</span><br><span class="line">import us.codecraft.webmagic.scheduler.DuplicateRemovedScheduler;</span><br><span class="line">import us.codecraft.webmagic.scheduler.MonitorableScheduler;</span><br><span class="line">import us.codecraft.webmagic.scheduler.component.DuplicateRemover;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Set;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Use Redis as url scheduler for distributed crawlers.&lt;br&gt;</span><br><span class="line"> *</span><br><span class="line"> * @author code4crafter@gmail.com &lt;br&gt;</span><br><span class="line"> * @since 0.2.0</span><br><span class="line"> */</span><br><span class="line">public class FIFOBreakPriorityRedisScheduler extends FIFOPriorityRedisScheduler  implements CanBreak &#123;</span><br><span class="line"></span><br><span class="line">    protected JedisPool pool;</span><br><span class="line">    private static final String BREAK_PREFIX = &quot;break_&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public FIFOBreakPriorityRedisScheduler(String host) &#123;</span><br><span class="line">        this(new JedisPool(new JedisPoolConfig(), host));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public FIFOBreakPriorityRedisScheduler(JedisPool pool) &#123;</span><br><span class="line">        super(pool);</span><br><span class="line">        this.pool = pool;</span><br><span class="line">        setDuplicateRemover(this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void pushWhenNoDuplicate(Request request, Task task) &#123;</span><br><span class="line">        long priority = request.getPriority();</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            jedis.zadd(getPriorityNumKey(task), priority, priority + &quot;&quot;);</span><br><span class="line">            jedis.rpush(getQueueKey(task, priority + &quot;&quot;), request.getUrl());</span><br><span class="line">            jedis.rpush(getBreakQueueKey(task), request.getUrl());</span><br><span class="line">            if (CheckForAdditionalInfo(request)) &#123;</span><br><span class="line">                String field = DigestUtils.shaHex(request.getUrl());</span><br><span class="line">                String value = JSON.toJSONString(request);</span><br><span class="line">                jedis.hset(getItemKey(task), field, value);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected  String getBreakQueueKey(Task task) &#123;</span><br><span class="line">        return BREAK_PREFIX  + task.getUUID();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void removeBreak(String url, Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            jedis.lrem(getBreakQueueKey(task), 1, url);</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public List getAllQueue(Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        List allQueue = new ArrayList();</span><br><span class="line">        try &#123;</span><br><span class="line">            Set&lt;String&gt; prioritySet = jedis.zrevrange(getPriorityNumKey(task), 0, -1);</span><br><span class="line">            for (String priority : prioritySet) &#123;</span><br><span class="line">                allQueue.addAll(jedis.lrange(getQueueKey(task, priority), 0, -1));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">            return allQueue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public List getBreakQueue (Task task)&#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        List allBreakQueue = new ArrayList();</span><br><span class="line">        try &#123;</span><br><span class="line">            allBreakQueue.addAll(jedis.lrange(getBreakQueueKey(task), 0, -1));</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">        return allBreakQueue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void addQueue(List&lt;String&gt; breakQueue,Task task) &#123;</span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        try &#123;</span><br><span class="line">            Set&lt;String&gt; prioritySet = jedis.zrevrange(getPriorityNumKey(task), 0, 0);</span><br><span class="line"></span><br><span class="line">            String priority = prioritySet.toArray(new String[1])[0];</span><br><span class="line">            if(priority==null||breakQueue.isEmpty())</span><br><span class="line">                return;</span><br><span class="line">            jedis.rpush(getQueueKey(task, priority), breakQueue.toArray(new String[breakQueue.size()]));</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            pool.returnResource(jedis);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>main方法中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Spider spider = Spider.create(webmagicXfplay).addUrl(urls).setDownloader(httpClientDownloader).addPipeline(new ImagePipeline()).thread(5);</span><br><span class="line">      FIFOBreakPriorityRedisScheduler scheduler = new FIFOBreakPriorityRedisScheduler(&quot;localhost&quot;);</span><br><span class="line">      List&lt;SpiderListener&gt; spiderListeners = new ArrayList&lt;&gt;();</span><br><span class="line">      spiderListeners.add(new BreakSpiderListener(scheduler,spider));</span><br><span class="line">      spider.setSpiderListeners(spiderListeners);</span><br></pre></td></tr></table></figure></p>
+<p>##7代理问题<br>有的网站做了反爬虫处理，如果一个ip访问次数达到一个峰值，那么就会封了这个ip<br>这时我们只能找代理了，网上有很多免费的代理，但都不一定好用，因为，代理ip分为三种，<br>透明代理：网站知道你用了代理，也知道你原来的ip是多少<br>匿名代理：网站知道你用了代理，但不知道你原来的ip是多少<br>高匿代理：网站有知道你用了代理，也不知道你原来的ip是多少<br>而网上的一些免费代理大都是透明，或者匿名代理。<br>有的变态网站，只有你用了高匿代理才行。。。。<br>我个人用过三类代理：<br><a href="http://www.data5u.com/" target="_blank" rel="noopener">http://www.data5u.com/</a> (质量不错，态度冷淡)<br>我用的是爬虫代理，访问一次api返回一个，但这个每秒只能请求两次，多了就不给你ip了。。。<br>所以可以用木桶算法来进行限流<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">package com.crawler.proxy;</span><br><span class="line"></span><br><span class="line">import com.crawler.HttpsUtils;</span><br><span class="line">import com.crawler.proxyutils.Data5uProxyHelper;</span><br><span class="line">import com.google.common.base.Splitter;</span><br><span class="line">import com.google.common.collect.Lists;</span><br><span class="line">import com.google.common.util.concurrent.RateLimiter;</span><br><span class="line">import com.jgs.industry.testip.U5IpSource;</span><br><span class="line">import com.virjar.dungproxy.client.httpclient.HttpInvoker;</span><br><span class="line">import com.virjar.dungproxy.client.model.AvProxyVO;</span><br><span class="line">import com.virjar.dungproxy.client.util.CommonUtil;</span><br><span class="line">import com.virjar.dungproxy.client.util.PoolUtil;</span><br><span class="line">import org.apache.commons.io.LineIterator;</span><br><span class="line">import org.apache.commons.lang3.math.NumberUtils;</span><br><span class="line">import org.apache.http.client.protocol.HttpClientContext;</span><br><span class="line">import org.slf4j.Logger;</span><br><span class="line">import org.slf4j.LoggerFactory;</span><br><span class="line">import us.codecraft.webmagic.Page;</span><br><span class="line">import us.codecraft.webmagic.Task;</span><br><span class="line">import us.codecraft.webmagic.proxy.Proxy;</span><br><span class="line">import us.codecraft.webmagic.proxy.ProxyProvider;</span><br><span class="line"></span><br><span class="line">import java.io.StringReader;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.concurrent.LinkedBlockingQueue;</span><br><span class="line">import java.util.concurrent.ThreadPoolExecutor;</span><br><span class="line">import java.util.concurrent.TimeUnit;</span><br><span class="line">import java.util.concurrent.locks.ReentrantLock;</span><br><span class="line">import java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Created by chenshengju on 2017/12/16.</span><br><span class="line"> */</span><br><span class="line">public class Date5uProxyProvider implements ProxyProvider &#123;</span><br><span class="line">    private static final Logger logger = LoggerFactory.getLogger(U5IpSource.class);</span><br><span class="line">    /**</span><br><span class="line">     * 无忧代理每次只能返回几个IP,但是短时间可以多次获取IP</span><br><span class="line">     */</span><br><span class="line">    /**</span><br><span class="line">     * 无忧代理提取地址</span><br><span class="line">     */</span><br><span class="line">    private static String url = &quot;http://api.ip.data5u.com/dynamic/get.html?order=12345678&amp;sep=3&quot;;</span><br><span class="line">    // 无忧代理每秒不能超过5此,所以添加限流器,我们发现无忧代理的实现不是这个规则,没有超过5此也会被封,测试发现每秒可以请求2次</span><br><span class="line">    private RateLimiter rateLimiter = RateLimiter.create(2);//</span><br><span class="line">    private static Proxy proxyTemp;</span><br><span class="line"></span><br><span class="line">    public Date5uProxyProvider() &#123;</span><br><span class="line">        //为了防止第一次请求多个线程争取口令牌，而抢不到，从而尴尬地出现proxyTemp为空的情况</span><br><span class="line">        while (proxyTemp==null)</span><br><span class="line">        &#123;</span><br><span class="line">            proxyTemp=getData5u();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Proxy getProxy(Task task) &#123;</span><br><span class="line">        Proxy proxy=proxyTemp;</span><br><span class="line">        if (rateLimiter.tryAcquire(1, 500, TimeUnit.MILLISECONDS)) &#123;// 500毫秒等待令牌桶的释放,guava限流器基于令牌桶算法</span><br><span class="line">            Proxy proxyData5u=getData5u();</span><br><span class="line">            if(proxyData5u!=null)</span><br><span class="line">            &#123;</span><br><span class="line">                proxy=proxyData5u;</span><br><span class="line">                proxyTemp=proxy;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            logger.info(&quot;请求过于频繁,放弃本次请求&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        logger.info(&quot;本次ip为&#123;&#125;&quot;,proxy.getHost());</span><br><span class="line">        return proxy;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void returnProxy(Proxy proxy, Page page, Task task) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public Proxy getData5u()</span><br><span class="line">    &#123;</span><br><span class="line">        Proxy proxy=null;</span><br><span class="line">        String ipAndPort= null;</span><br><span class="line">        try &#123;</span><br><span class="line">            ipAndPort = HttpsUtils.get(url).trim();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            logger.info(&quot;无忧代理访问网络异常&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        String[] ss = ipAndPort.split(&quot;:&quot;);</span><br><span class="line">        Pattern ipAndPortPattern = Pattern.compile(&quot;([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]))&#123;3&#125;:\\d&#123;1,6&#125;&quot;);</span><br><span class="line">        if(ipAndPortPattern.matcher(ipAndPort).find())</span><br><span class="line">        &#123;</span><br><span class="line">            proxy = new Proxy(ss[0],Integer.parseInt(ss[1]));</span><br><span class="line">        &#125;</span><br><span class="line">        return proxy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://h.zhimaruanjian.com/" target="_blank" rel="noopener">http://h.zhimaruanjian.com/</a> (能用，质量不清楚，态度一般)<br><a href="http://www.xdaili.cn/" target="_blank" rel="noopener">http://www.xdaili.cn/</a> (动态代理在2017年11月老是听说不太稳，现在不知道怎么样了，不过态度不错，动态代理不能用于无界浏览器)<br>这三类代理都各有特色吧，说不上谁好，只能说挑适合自己的</p>
+<h3 id="7-1-Seleninum-phantomjs动态设置代理的问题"><a href="#7-1-Seleninum-phantomjs动态设置代理的问题" class="headerlink" title="7.1 Seleninum+phantomjs动态设置代理的问题"></a>7.1 Seleninum+phantomjs动态设置代理的问题</h3><p>这个问题困扰了我一段时间，网上都没有这方面的教程，后来我自己去啃源码和英文文档才知道方法<br><code>PhantomJSDriver.class.cast(webDriver).executePhantomJS(&quot;phantom.setProxy(&#39;&quot;+proxy.getHost()+&quot;&#39;, &quot;+proxy.getPort()+&quot;)&quot;);</code><br>phantomjs+js仿照这个也可以动态设置</p>
+<h3 id="7-2-Seleninum-chrome设置代理的问题"><a href="#7-2-Seleninum-chrome设置代理的问题" class="headerlink" title="7.2 Seleninum+chrome设置代理的问题"></a>7.2 Seleninum+chrome设置代理的问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CHROME_PATH = SeleniumConfig.chromePath;</span><br><span class="line">       System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY,CHROME_PATH);</span><br><span class="line">       caps.setJavascriptEnabled(true);</span><br><span class="line">       ChromeOptions chromeOptions = new ChromeOptions() ;</span><br><span class="line">       chromeOptions.addArguments(&quot;--proxy-server=http://&quot;+proxyExpire.getHost()+&quot;:&quot;+proxyExpire.getPort());</span><br><span class="line">       caps.setCapability(ChromeOptions.CAPABILITY, chromeOptions);</span><br><span class="line">       WebDriver mDriver = new ChromeDriver(caps);</span><br></pre></td></tr></table></figure>
+<p>但遗憾的是我并没有找到动态设置代理的方法，启动完chrome后，除非关了这个chrome,再重启，要不然没有办法。也许现在新的chrome有方式可以办到吧。</p>
+<p>##8验证码</p>
+<p>这个可以用TesseractOcr来识别，但难度挻大，搞定这个，也就成了图像识别高手了。所以最简单的方法是用打码平台。<br>在很久以前没有机器学习的时候，打码平台背后是一群真正的人来手工打码，但有了机器学习后，打码平台也用上了这玩意。但有的时候我们也可以利用机器学习来训练。可能机器学习听起来很难，但如果只用用他的api的话，也是可以做到不错的效果的。可以用TensorFlow或者Darknet来，这方面我也不是很懂，也是我的同事做过这方面的事。</p>
+<p>###8.1极验<br><a href="https://zhuanlan.zhihu.com/p/28492887" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/28492887</a><br><a href="https://blog.csdn.net/u011153869/article/details/71077415" target="_blank" rel="noopener">https://blog.csdn.net/u011153869/article/details/71077415</a><br>这是当初极验的一些破解方法，当然现在已经没有用了，但这仍然有一定参考的价值。</p>
+<p>##9爬虫分布式<br>爬虫分布式咋一听，好像是个高大上的东西，但我了解过后反而有点大失所望。所谓的分布式只是把url的存取队列改成了redis,这样多台机器上的爬虫程序共享这个队列，这样就可以通过加机器来提升速度，这也就是分布式爬虫，我以为只是wemagic这么实现的，后来粗略学习了下scrapy，发现分布式爬虫也就这么回事。<br><code>`spider.setScheduler(new RedisPriorityScheduler(&quot;localhost&quot;));</code>用这个方法就可以是分布式了<br><a href="https://gitee.com/shentong_012/YayCrawler这个项目反倒有点分布式的意味。" target="_blank" rel="noopener">https://gitee.com/shentong_012/YayCrawler这个项目反倒有点分布式的意味。</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/08/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjQ2Mi85MDIz"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="chenSJ519" />
+            
+              <p class="site-author-name" itemprop="name">chenSJ519</p>
+              <p class="site-description motion-element" itemprop="description">写点什么好呢？</p>
+          </div>
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/chenSJ519" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:chenshengjvcsj@foxmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://blog.csdn.net/a1264830070" target="_blank" title="CSDN">
+                    
+                      <i class="fa fa-fw fa-book"></i>CSDN</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://clove506.github.io/" title="clove506" target="_blank">clove506</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+		<div id="music163player">
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=401767&auto=0&height=66"></iframe>
+		</div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java爬虫从入门到初级"><span class="nav-number">1.</span> <span class="nav-text">java爬虫从入门到初级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-断点继爬"><span class="nav-number">1.1.</span> <span class="nav-text">6.断点继爬</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-Seleninum-phantomjs动态设置代理的问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">7.1 Seleninum+phantomjs动态设置代理的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-Seleninum-chrome设置代理的问题"><span class="nav-number">1.1.2.</span> <span class="nav-text">7.2 Seleninum+chrome设置代理的问题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chenSJ519</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("XMt9MD2GB7c0K9B0VPRcotxj-gzGzoHsz", "X2U536EC2EplIDaLTrrDTQFV");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

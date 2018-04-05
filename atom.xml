@@ -135,6 +135,26 @@
   </entry>
   
   <entry>
+    <title>window10中docker里的mongodb无法启动的问题</title>
+    <link href="http://yoursite.com/2017/11/08/window10%E4%B8%ADdocker%E9%87%8C%E7%9A%84mongodb%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/11/08/window10中docker里的mongodb无法启动的问题/</id>
+    <published>2017-11-08T01:44:33.000Z</published>
+    <updated>2018-04-05T17:40:36.665Z</updated>
+    
+    <content type="html"><![CDATA[<p> window10中docker里的mongodb无法启动的问题<br><a id="more"></a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=8137402d10c5</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] db version v3.6.0</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t  3 May 2016</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] allocator: tcmalloc</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] modules: none</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] build environment:</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten]     distmod: debian81</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten]     distarch: x86_64</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten]     target_arch: x86_64</span><br><span class="line">2017-12-23T03:27:52.784+0000 I CONTROL  [initandlisten] options: &#123; net: &#123; bindIpAll: <span class="literal">true</span> &#125;, security: &#123; authorization: <span class="string">"enabled"</span> &#125; &#125;</span><br><span class="line">2017-12-23T03:27:52.795+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=478M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=<span class="literal">false</span>,statistics=(fast),<span class="built_in">log</span>=(enabled=<span class="literal">true</span>,archive=<span class="literal">true</span>,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(<span class="built_in">wait</span>=0),verbose=(recovery_progress),</span><br><span class="line">2017-12-23T03:27:52.827+0000 E STORAGE  [initandlisten] WiredTiger error (1) [1513999672:827283][1:0x7fb8288d6a00], connection: /data/db/WiredTiger.wt: handle-open: open: Operation not permitted</span><br><span class="line">2017-12-23T03:27:52.831+0000 E -        [initandlisten] Assertion: 28595:1: Operation not permitted src/mongo/db/storage/wiredtiger/wiredtiger_kv_engine.cpp 413</span><br><span class="line">2017-12-23T03:27:52.838+0000 I STORAGE  [initandlisten] exception <span class="keyword">in</span> initAndListen: Location28595: 1: Operation not permitted, terminating</span><br><span class="line">2017-12-23T03:27:52.838+0000 I NETWORK  [initandlisten] shutdown: going to close listening sockets...</span><br><span class="line">2017-12-23T03:27:52.838+0000 I CONTROL  [initandlisten] now exiting</span><br><span class="line">2017-12-23T03:27:52.838+0000 I CONTROL  [initandlisten] shutting down with code:100</span><br></pre></td></tr></table></figure><p>docker run -d -p 27017:27017 -v D:/docker/mongo:/data/db  –name mongodb mongo</p><p>改为docker run -d -p 27017:27017   –name mongodb mongo</p><p>心得：少用 -v参</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; window10中docker里的mongodb无法启动的问题&lt;br&gt;
+    
+    </summary>
+    
+      <category term="docker" scheme="http://yoursite.com/categories/docker/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>docker常用命令</title>
     <link href="http://yoursite.com/2017/11/07/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2017/11/07/docker常用命令/</id>
@@ -175,6 +195,26 @@
       <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
     
       <category term="部署" scheme="http://yoursite.com/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker装oracle,设置编码</title>
+    <link href="http://yoursite.com/2017/01/07/docker%E8%A3%85oracle,%E8%AE%BE%E7%BD%AE%E7%BC%96%E7%A0%81/"/>
+    <id>http://yoursite.com/2017/01/07/docker装oracle,设置编码/</id>
+    <published>2017-01-07T13:53:22.000Z</published>
+    <updated>2018-04-05T17:43:50.947Z</updated>
+    
+    <content type="html"><![CDATA[<p> docker装oracle,设置编码<br><a id="more"></a></p><p>sqlplus /nolog<br>conn sys as sysdba<br>目前我的数据库环境的字符集是AL32UTF8，那么把它改成ZHS16GBK</p><p>1.首先以sysdba的身份登录上去 conn /as sysdba</p><p>2.关闭数据库shutdown immediate;</p><p>3.以mount打来数据库，startup mount</p><p>4.设置session </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> SQL&gt;ALTER SYSTEM ENABLE RESTRICTED SESSION;</span><br><span class="line">SQL&gt; ALTER SYSTEM SET JOB_QUEUE_PROCESSES=0;</span><br><span class="line">SQL&gt; ALTER SYSTEM SET AQ_TM_PROCESSES=0;</span><br></pre></td></tr></table></figure><p>5.启动数据库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter database open;</span><br></pre></td></tr></table></figure><p>6.修改字符集</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE CHARACTER SET ZHS16GBK;</span><br></pre></td></tr></table></figure><p>这会可能会报错，提示我们的字符集：新字符集必须为旧字符集的超集，这时我们可以跳过超集的检查做更改：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE character set INTERNAL_USE ZHS16GBK;</span><br></pre></td></tr></table></figure><p>这条语句就可以了，TERNAL_USE提供的帮助就会使oracle绕过了子集与超集的验证，这条语句和上面的语句内部操作时完全相同的。</p><p>7.关闭，重新启动</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt;shutdown immediate;</span><br><span class="line">SQL&gt; startup</span><br></pre></td></tr></table></figure><p>当然字符集最好不要轻易修改，因为这会对数据库的数据有直接的影响，如果是生产环境的话，可能会造成不可估计得损失。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; docker装oracle,设置编码&lt;br&gt;
+    
+    </summary>
+    
+      <category term="docker" scheme="http://yoursite.com/categories/docker/"/>
+    
     
   </entry>
   

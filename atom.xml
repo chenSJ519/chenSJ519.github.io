@@ -218,4 +218,24 @@
     
   </entry>
   
+  <entry>
+    <title>git  cherry-pick使用 idea 樱桃图标</title>
+    <link href="http://yoursite.com/2017/01/03/git%20%20cherry-pick%E4%BD%BF%E7%94%A8%20idea%20%E6%A8%B1%E6%A1%83%E5%9B%BE%E6%A0%87/"/>
+    <id>http://yoursite.com/2017/01/03/git  cherry-pick使用 idea 樱桃图标/</id>
+    <published>2017-01-03T14:52:33.000Z</published>
+    <updated>2018-04-08T13:28:37.172Z</updated>
+    
+    <content type="html"><![CDATA[<p>git  cherry-pick使用 idea 樱桃图标<br><a id="more"></a></p><h1 id="git-cherry-pick使用-idea-樱桃图标"><a href="#git-cherry-pick使用-idea-樱桃图标" class="headerlink" title="git  cherry-pick使用 idea 樱桃图标"></a>git  cherry-pick使用 idea 樱桃图标</h1><p>记一下git解决的问题方法,几个星期前在应要求在dev分支上开发，并提交了两功能，（dev分支后来又陆续被其他人提交了多次）后来又让我在database_updata分支上开发，一个测试的同事，让我把之前的dev我做的功能合并到database_update分支上方便测试，刚开始以为也就是合并分支的事，于是git checkout database_update,git merge dev,发现一大堆冲突要解决，关键这些冲突的代码不是我写的我也不方便去解决，然后找到修改过这些代码的开发同事，让他们来进行合并，但让我晕的是同事说，因为dev分支和database_update分支有很大的不同，过早进行合并的话，要造成太多的麻烦，但另一个搞测试的同事又让我把dev我做的功能合并到database_update分支测试，我完全不知道咋办了，同事建议，要不。。。找到之前的改变再粘一遍？，吐血，我小心翼翼粘贴一遍自己写的代码，然后再测一下？这不是扯淡吗。我先是想到了git rebase 这个命令，但，无奈的是还是一样要解决大量不是自己造成的冲突，回到家，又琢磨了一下，然后看到idea樱桃图标，灵机一动到，这也许就是我要找的，搜索了一下这git cherry-pick命令的使用，<a href="http://blog.csdn.net/u010697394/article/details/60956514，看了这篇文章，知道了正是我想要的，保险起见，先基于database_update分支，new个testCherry分支，然后，选中要移的改变，点中那个樱桃图标，嗯，很顺利没报冲突，再先一个要移的改变，点中那个樱桃图标，哈哈大功告成。我意识到，git真是个强大的工具，学好它，会使写代码变得很舒服。" target="_blank" rel="noopener">http://blog.csdn.net/u010697394/article/details/60956514，看了这篇文章，知道了正是我想要的，保险起见，先基于database_update分支，new个testCherry分支，然后，选中要移的改变，点中那个樱桃图标，嗯，很顺利没报冲突，再先一个要移的改变，点中那个樱桃图标，哈哈大功告成。我意识到，git真是个强大的工具，学好它，会使写代码变得很舒服。</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;git  cherry-pick使用 idea 樱桃图标&lt;br&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+  </entry>
+  
 </feed>

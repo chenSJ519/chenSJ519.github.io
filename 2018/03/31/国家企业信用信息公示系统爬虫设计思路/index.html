@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://static.zybuluo.com/chenSJ/veb1g8jd256u1r9a20w7mn53/2018-04-05_221832.jpg">
 <meta property="og:image" content="http://static.zybuluo.com/chenSJ/n56a3yxlarg7pgigks3tbha9/2018-04-05_223342.jpg">
 <meta property="og:image" content="http://static.zybuluo.com/chenSJ/ugz2gco5o6gl65dnem4sxiga/2018-04-05_224002.jpg">
-<meta property="og:updated_time" content="2018-04-08T14:07:32.755Z">
+<meta property="og:updated_time" content="2018-04-22T08:14:35.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="国家企业信用信息公示系统（广东）爬虫设计思路">
 <meta name="twitter:description" content="写一下设计的思路">
@@ -377,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,870
+                  2,085
                 </span>
               
 
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  7
                 </span>
               
             </div>
@@ -428,6 +428,15 @@
 <h2 id="对于是否经营异常企业的判断"><a href="#对于是否经营异常企业的判断" class="headerlink" title="对于是否经营异常企业的判断"></a>对于是否经营异常企业的判断</h2><p><img src="http://static.zybuluo.com/chenSJ/n56a3yxlarg7pgigks3tbha9/2018-04-05_223342.jpg" alt="2018-04-05_223342.jpg-208.7kB"><br>如果在这一页有记录，且没有“移除经营异常的记录”，那么这个企业就是有经营异常的。所以我是把异常的记录数量和“移除经营异常的记录”的数量作比较，看哪边大，从而判断这个企业是否有异常。</p>
 <h2 id="结果是什么"><a href="#结果是什么" class="headerlink" title="结果是什么"></a>结果是什么</h2><p><img src="http://static.zybuluo.com/chenSJ/ugz2gco5o6gl65dnem4sxiga/2018-04-05_224002.jpg" alt="2018-04-05_224002.jpg-1230kB"></p>
 <p>生成gov+日期.txt文件，和 日期.ok文件，再上传回服务器。</p>
+<h2 id="顺序是什么"><a href="#顺序是什么" class="headerlink" title="顺序是什么"></a>顺序是什么</h2><p>1企业名称提取字段<br>companyNames=企业名称,名称</p>
+<p>2注册号提取字段<br>regNums=统一社会信用代码/注册号,注册号,注册号/统一社会信用代码</p>
+<p>3法人提取字段<br>legalPersons=法定代表人,负责人,经营者,投资人,执行事务合伙人</p>
+<p>4营业期限至 提取字段<br>businessTos=营业期限至,合伙期限至</p>
+<p>5注册资本提取字段<br>regMoneys=注册资本</p>
+<p>6住所提取字段<br>addresss=住所,营业场所,经营场所,主要经营场所</p>
+<p>7经营范围提取字段<br>businessScopes=经营范围</p>
+<p>8是否列入经营异常名录<br>2代表没有经营异常，1代表有经营异常</p>
+<p>9是否列入严重违法失信企业名单<br>2代表没有列入，1代表有经营异常</p>
 <h2 id="断点爬取"><a href="#断点爬取" class="headerlink" title="断点爬取"></a>断点爬取</h2><p>初期的方案是，把已经查出来的公司结果文件和待查询的文件比对，看哪些公司没有查到，如果没有查到，说明是上次没有抓完的，这种方式太过low了，现在方案是用redis缓存起来。</p>
 <h2 id="代理问题"><a href="#代理问题" class="headerlink" title="代理问题"></a>代理问题</h2><p>由于当时需求是不要用代理，银行用那玩意不安全，找出对方网站的反爬虫方案来，我的研究结果是开五个线程把停顿的延迟变为1秒即可，但有的时候会不生效。也许是看对方的心情吧。现在方案是data5u这类网上的爬虫ip提供商来去爬取。</p>
 
@@ -652,7 +661,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#国家企业信用信息公示系统（广东）爬虫设计思路"><span class="nav-number">1.</span> <span class="nav-text">国家企业信用信息公示系统（广东）爬虫设计思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三个参数"><span class="nav-number">1.0.1.</span> <span class="nav-text">三个参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#301重定向"><span class="nav-number">1.0.2.</span> <span class="nav-text">301重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phantomjs如何和java通信？"><span class="nav-number">1.0.3.</span> <span class="nav-text">phantomjs如何和java通信？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始爬取了"><span class="nav-number">1.1.</span> <span class="nav-text">开始爬取了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询的逻辑是什么？"><span class="nav-number">1.2.</span> <span class="nav-text">查询的逻辑是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两个不同的结构"><span class="nav-number">1.3.</span> <span class="nav-text">两个不同的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于是否经营异常企业的判断"><span class="nav-number">1.4.</span> <span class="nav-text">对于是否经营异常企业的判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结果是什么"><span class="nav-number">1.5.</span> <span class="nav-text">结果是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断点爬取"><span class="nav-number">1.6.</span> <span class="nav-text">断点爬取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理问题"><span class="nav-number">1.7.</span> <span class="nav-text">代理问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#国家企业信用信息公示系统（广东）爬虫设计思路"><span class="nav-number">1.</span> <span class="nav-text">国家企业信用信息公示系统（广东）爬虫设计思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三个参数"><span class="nav-number">1.0.1.</span> <span class="nav-text">三个参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#301重定向"><span class="nav-number">1.0.2.</span> <span class="nav-text">301重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phantomjs如何和java通信？"><span class="nav-number">1.0.3.</span> <span class="nav-text">phantomjs如何和java通信？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始爬取了"><span class="nav-number">1.1.</span> <span class="nav-text">开始爬取了</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询的逻辑是什么？"><span class="nav-number">1.2.</span> <span class="nav-text">查询的逻辑是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两个不同的结构"><span class="nav-number">1.3.</span> <span class="nav-text">两个不同的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于是否经营异常企业的判断"><span class="nav-number">1.4.</span> <span class="nav-text">对于是否经营异常企业的判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结果是什么"><span class="nav-number">1.5.</span> <span class="nav-text">结果是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#顺序是什么"><span class="nav-number">1.6.</span> <span class="nav-text">顺序是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断点爬取"><span class="nav-number">1.7.</span> <span class="nav-text">断点爬取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理问题"><span class="nav-number">1.8.</span> <span class="nav-text">代理问题</span></a></li></ol></li></ol></div>
             
 
           </div>
